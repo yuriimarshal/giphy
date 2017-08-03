@@ -1,0 +1,43 @@
+<div class="page">
+    <div class="white-frame login">
+        <h2 class="header">
+            Log In to My Giphy Collection
+        </h2>
+        <form name="loginForm" novalidate ng-submit="vm.login()">
+            <md-input-container class="md-block" md-no-float>
+                <input name="username" ng-model="vm.form.username" placeholder="Name" required>
+                <div ng-messages="loginForm.username.$error" role="alert">
+                    <div ng-message="required">
+                        Username field is required
+                    </div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block" md-no-float>
+                <input type="password" name="password" ng-model="vm.form.password" placeholder="Password" required/>
+                <div ng-messages="loginForm.password.$error" role="alert">
+                    <div ng-message="required">
+                        Password field is required
+                    </div>
+                </div>
+            </md-input-container>
+
+            <div class="remember-password" layout="row" layout-xs="column"
+                 layout-align="space-between center">
+                <md-checkbox class="md-primary" ng-model="vm.isRememberChecked" aria-label="Remember Me">
+                    Remember Me
+                </md-checkbox>
+            </div>
+
+            <md-button type="submit" class="md-raised md-primary" aria-label="LOG IN"
+                       ng-disabled="loginForm.$invalid || loginForm.$pristine">
+                LOG IN
+            </md-button>
+
+            <div class="register" layout="row" layout-sm="column" layout-align="center center">
+                <span class="text">Don't have an account?</span>
+                <a class="link" ui-sref="registration">Create an account</a>
+            </div>
+        </form>
+    </div>
+</div>

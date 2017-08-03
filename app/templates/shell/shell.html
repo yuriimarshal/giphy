@@ -1,0 +1,38 @@
+<div class="shell">
+    <header class="main-header" layout="row" layout-align="space-between center">
+        <div class="menu" layout="row" layout-align="start center">
+            <img src="../../assets/img/api_giphy_logo.png" alt="logo" ui-sref="app.home">
+            <div class="item" ui-sref="app.home">
+                <span>Home</span>
+            </div>
+            <div class="item" ui-sref="app.user-collection">
+                <span>My collection</span>
+            </div>
+        </div>
+
+        <div class="menu-button" layout="row" layout-align="start center">
+            <md-button ui-sref="app.home" aria-label="Home" class="md-fab md-primary md-mini">
+                <ng-md-icon style="fill: white" icon="home"></ng-md-icon>
+            </md-button>
+            <md-button ui-sref="app.user-collection" aria-label="Collection" class="md-fab md-primary md-mini">
+                <ng-md-icon style="fill: white" icon="view_module"></ng-md-icon>
+            </md-button>
+        </div>
+
+        <div class="logout" ng-click="vm.logout()">
+            <ng-md-icon icon="logout"></ng-md-icon>
+        </div>
+    </header>
+
+    <md-content id="content">
+        <ui-view>
+
+        </ui-view>
+    </md-content>
+
+    <footer class="main-footer" layout="row" layout-align="center center">
+        <div class="information">
+            <span>Y. Marshall 2017 All rights reserved</span>
+        </div>
+    </footer>
+</div>

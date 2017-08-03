@@ -1,0 +1,31 @@
+.collection {
+  .header {
+    width: 100%;
+    text-align: center;
+  }
+  .upload-static {
+    position: fixed;
+    right: 0;
+  }
+  .collection-container {
+    .item {
+
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .collection {
+    .upload-static {
+      bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .collection {
+    .upload-static {
+      top: 65px;
+    }
+  }
+}

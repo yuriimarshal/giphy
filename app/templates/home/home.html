@@ -1,0 +1,27 @@
+<div class="page">
+    <div class="home">
+        <div class="search-container" layout="row" layout-align="end center">
+            <input ng-show="isOpenSearch" placeholder="Global search" type="text" ng-model="vm.textSearch"/>
+            <md-button ng-click="isOpenSearch=!isOpenSearch" class="md-fab md-mini">
+                <ng-md-icon style="fill: white" icon="search">
+                    <md-tooltip>Global search</md-tooltip>
+                </ng-md-icon>
+            </md-button>
+        </div>
+
+        <div class="gif-container" layout="row" layout-align="center start"
+             infinity-scroll="vm.loadMoreGifts(vm.textSearch)">
+            <div class="item" ng-repeat="item in vm.stockList track by $index">
+                <img ng-click="vm.showGifDialog(item, $event)"
+                     ng-src="{{item.fixed_height_small_url}}"
+                     alt="{{item.id}}">
+                <md-button class="md-fab md-mini" md-colors="{background: 'green'}"
+                           ng-click="vm.saveToMyCollection(item.id)">
+                    <ng-md-icon style="fill: white" icon="add">
+                        <md-tooltip>Add to collection</md-tooltip>
+                    </ng-md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>

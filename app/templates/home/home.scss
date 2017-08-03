@@ -1,0 +1,24 @@
+.home {
+  .search-container {
+    position: fixed;
+    top: 5px;
+    right: 40px;
+    z-index: 99;
+    padding: 0 20px;
+    .md-button.md-fab.md-mini {
+      background: #514a75;
+      box-shadow: none;
+    }
+    input {
+      font-size: large;
+      border-radius: 10px;
+      background-color: #c5c4c7;
+      width: 80%;
+      height: 45px;
+      padding: 5px;
+    }
+    input:focus{
+      background-color: #fff;
+    }
+  }
+}

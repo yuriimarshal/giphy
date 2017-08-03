@@ -1,0 +1,24 @@
+<div class="dialog-window">
+    <div class="dialog-header">
+        <ng-md-icon style="fill: white" ng-click="vm.closeDialog()" icon="close">
+            <md-tooltip>Close</md-tooltip>
+        </ng-md-icon>
+    </div>
+    <div class="main-container">
+        <div class="choose-gif">
+            <choose-file-button fileread="vm.fileName">
+                <input type="file" accept="image/gif"/>
+                {{vm.fileName}}
+                <button>Choose Gif</button>
+            </choose-file-button>
+        </div>
+
+        <div class="upload-form" ng-if="vm.fileName">
+            <input type="text" placeholder="Type your name" ng-model="vm.userName">
+            <md-chips ng-model="vm.tags" placeholder="Add tags (optional)" md-max-chips="5"></md-chips>
+            <button type="button" ng-disabled="!vm.userName" ng-click="vm.uploadToServer()">
+                Upload
+            </button>
+        </div>
+    </div>
+</div>

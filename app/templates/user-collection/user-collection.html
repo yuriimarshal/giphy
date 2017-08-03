@@ -1,0 +1,27 @@
+<div class="page">
+    <div class="collection">
+        <h1 class="header">
+            My Collection
+        </h1>
+
+        <div class="upload-static">
+            <md-button class="md-fab" md-colors="{background: 'green'}">
+                <ng-md-icon style="fill: white" icon="publish">
+                    <md-tooltip>Upload Gif</md-tooltip>
+                </ng-md-icon>
+            </md-button>
+        </div>
+
+        <div class="gif-container" layout="row" layout-align="center start">
+            <div class="item" ng-repeat="item in vm.collection track by $index">
+                <img ng-src="{{item.images.fixed_height.url}}" alt="{{item.images.downsized.url}}">
+                <md-button class="md-fab md-mini md-warn" ng-click="vm.removeGifFromCollection(item.id, $index)">
+                    <ng-md-icon style="fill: white" icon="remove">
+                        <md-tooltip>Remove from the collection</md-tooltip>
+                    </ng-md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>
+
