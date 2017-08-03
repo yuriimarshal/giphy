@@ -3,7 +3,7 @@ test project
 
 COMMANDS for quick start:
 
-git clone https://github.com/yusandman/giphy.git
+git clone https://github.com/yuriymarshall/giphy.git
 
 npm install
 
