@@ -11,8 +11,6 @@ body {
 
   .white-frame {
     margin: 0 auto;
-    width: 384px;
-    max-width: 384px;
     padding: 32px;
     background: #FFFFFF;
     text-align: center;
@@ -110,6 +108,9 @@ md-dialog {
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+  .white-frame {
+    width: 200px;
+  }
   .gif-container {
     .item {
       width: 100%;
@@ -127,6 +128,9 @@ md-dialog {
 
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .white-frame {
+    width: 250px;
+  }
   .gif-container {
     .item {
       width: 45%;
@@ -144,6 +148,9 @@ md-dialog {
 
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .white-frame {
+    width: 300px;
+  }
   .gif-container {
     .item {
       width: 25%;
@@ -162,6 +169,9 @@ md-dialog {
 
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .white-frame {
+    width: 350px;
+  }
   .gif-container {
     .item {
       width: 25%;
@@ -171,6 +181,9 @@ md-dialog {
 
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
+  .white-frame {
+    width: 350px;
+  }
   .gif-container {
     .item {
       width: 20%;
@@ -180,6 +193,9 @@ md-dialog {
 
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+  .white-frame {
+    width: 350px;
+  }
   .gif-container {
     .item {
       width: 20%;
